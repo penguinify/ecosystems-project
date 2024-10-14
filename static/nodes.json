@@ -26,8 +26,8 @@
         "name": "Keystone Species",
         "content":
             {
-                "images": [],
-                "information": "mN1!bV2@cX3#zL4$oK5%jH6^gF7&dS8*aP9(uI0)tY1-rE2=wQ3+yR4_zW5"
+                "images": ["./static/puma_picture.webp"],
+                "information": "The puma as an apex predator plays a big role in the ecosystem. Being the main predator to guanaco, it helps prevent overgrazing to support the many plants and flowers. It is also the only large predator, so it also has a massive role, keeping smaller mammals and other animals lower in the food chain from over populating such as hares."
             },
         "connections": [2, 7]
     },
