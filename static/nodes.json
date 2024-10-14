@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "name": "Plants",
+        "content":
+            {
+                "images": [],
+                "information": "aB1!cD2@eF3#gH4$iJ5%kL6^mN7&oP8*pQ9(rS0)sT1-uV2=wX3+yY4_zZ5"
+            },
+        "connections": [2, 3]
+    },
+
+    {
+        "id": 2,
+        "name": "Animals",
+        "content":
+            {
+                "images": [],
+                "information": "qW1!eR2@tY3#uI4$oP5%aS6^dF7&gH8*jK9(lL0)zX1-xC2=vV3+bN4_mM5"
+            },
+        "connections": [6, 3]
+    },
+
+    {
+        "id": 3,
+        "name": "Keystone Species",
+        "content":
+            {
+                "images": [],
+                "information": "mN1!bV2@cX3#zL4$oK5%jH6^gF7&dS8*aP9(uI0)tY1-rE2=wQ3+yR4_zW5"
+            },
+        "connections": [2, 7]
+    },
+
+    {
+        "id": 4,
+        "name": "Location & Terrain",
+        "content":
+            {
+                "images": ["./static/topographicmap.png", "./static/googlemap.png"],
+                "information": "Torres del Paine national park is located in Patagonia, Chile, which is near the southern tip. The park in total is 700.43 square miles and is mainly mountainous with a few valleys. A few of the main valleys are French Valley, Bader Valley, Ascension Valley, and Valley of Silence. The highest peak in the park, Cerro Paine Grande, reaches 9461ft tall. There are also four different ecological zones, Andean Desert, Magellanic subpolar forest, pre-Andean shrublands, and Patagonian steppe."
+            },
+        "connections": [5, 2]
+    },
+
+    {
+        "id": 5,
+        "name": "Climate & Weather",
+        "content":
+            {
+                "images": ["./static/temperaturechart.png"],
+                "information": "Due to Torres del Paine being in the southern hemisphere, it’s summer and winter months are flipped. So, while in the northern hemisphere it is warm in June, it is freezing in the southern hemisphere. From the graph below, you can see the average temperatures compared to the temperatures from Olympic national park in Washington. From that you can observe that Torres del Paine remains cold throughout the entire year. Torres del Paine is also known to be extremely windy like other mountainous national parks."
+            },
+        "connections": [7, 4]
+    },
+
+    {
+        "id": 6,
+        "name": "Water Sources",
+        "content":
+            {
+                "images": [],
+                "information": "Torres del Paine national park does not connect to the ocean but it does encompass a few freshwater lakes such as Gray Lake, Lago Sarmiento de Gamboa, Lake Pehoé, Nordenskjold Lake, and Lago Geikie. There are a few rivers between and flowing into the lakes. These lakes are a stable source of water for the animals living there and good amount of snow especially during their winter months."
+            },
+        "connections": [3, 4]
+    },
+
+    {
+        "id": 7,
+        "name": "Human Interactions",
+        "content":
+            {
+                "images": ["./static/wildfire.png"],
+                "information": "Humans have a major role in the Torres del Paine national park. For example, in 2012, A tourist accidently caused a massive wildfire in Torres del Paine burning down about 15000 hectares. With nearly 300,000 tourists each year in this 700 square mile park there is bound to be plastic and other trash scattered around in the park, negatively affecting wildlife. On the other hand, CONAF, the Chilean national park authority, help repair damaged ecosystems. They also use tools such as photo monitoring to improve conservation efforts. "
+            },
+        "connections": [5, 1]
+    }
+]
