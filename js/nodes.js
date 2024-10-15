@@ -24,6 +24,8 @@ export class NodeManager {
 
         let center = [window.innerWidth / 2, window.innerHeight / 2];
 
+        center[1] += window.innerHeight;
+
         for (let i = 0; i < this.nodes.length; i++) {
             let node = this.nodes[i];
             let point = equidistant_points[i];
@@ -92,7 +94,7 @@ export class NodeManager {
         this.connectNodes();
 
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.node') && this.currently_selected_node) {
+            if (!e.target.closest('.node') && !e.target.closest('.line') && this.currently_selected_node) {
                 this.currently_selected_node.animate([
                     { opacity: 1 },
                     { opacity: 0 }
@@ -109,7 +111,11 @@ export class NodeManager {
     // connects the nodes connections with lines
     connectNodes() {
 
+        let center = [window.innerWidth / 2, window.innerHeight / 2];
+        center[1] += window.innerHeight;
+
         for (let node of this.nodes) {
+
             let connections = node.connections;
 
             let node_element = document.getElementById(node.id);
@@ -120,6 +126,7 @@ export class NodeManager {
                 node_connection_elements.push(connection_element);
             }
 
+            let i = 0;
             for (let node_connection_element of node_connection_elements) {
                 let line = document.createElement('div');
                 line.className = 'line';
@@ -140,6 +147,40 @@ export class NodeManager {
                 line.style.top = y1 + 'px';
                 line.style.transform = `rotate(${angle}rad)`;
 
+                let node_content = createElement('div', this.app, 'node-content');
+                let node_content_text = createElement('p', node_content, 'node-content-text', node.content.connection_content[i]);
+
+                let help_text = createElement('p', node_content, 'help-text', 'Click anywhere to close');
+
+                node_content.style.left = center[0] + 'px';
+                node_content.style.top = center[1] + 'px';
+                node_content.style.opacity = 0;
+
+                line.addEventListener('click', () => {
+                    if (this.currently_selected_node) {
+                        this.currently_selected_node.animate([
+                            { opacity: 1 },
+                            { opacity: 0 }
+                        ], {
+                            duration: 1,
+                            fill: 'forwards'
+                        });
+                    }
+
+                    node_content.animate([
+                        { opacity: 0 },
+                        { opacity: 1 }
+                    ], {
+                        duration: 100,
+                        fill: 'forwards'
+                    });
+
+                    this.currently_selected_node = node_content;
+
+                })
+
+                i++;
+
             }
         }
 
@@ -154,7 +195,7 @@ export class NodeManager {
         let angle, x, y;
 
         let h = window.innerWidth / 2;
-        let k = window.innerHeight / 2;
+        let k = window.innerHeight / 2 + window.innerHeight;
 
         for (let i = 0; i < amount_of_points; i++) {
             angle = angle_distance * i;

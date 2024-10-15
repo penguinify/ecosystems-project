@@ -554,8 +554,32 @@ video {
   display: none;
 }
 
-.fixed {
-  position: fixed;
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.ml-32 {
+  margin-left: 8rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -566,6 +590,10 @@ video {
   height: 100vh;
 }
 
+.w-2\/5 {
+  width: 40%;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -574,12 +602,56 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
+.content-center {
+  align-content: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .border {
   border-width: 1px;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-sky-400 {
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.decoration-sky-400 {
+  text-decoration-color: #38bdf8;
 }
 
 .transition {
@@ -596,17 +668,12 @@ video {
 
 body {
   background-color: #f0f0f0;
-  background-size: cover;
-  animation: scale-in 2s;
-}
-
-#app {
 }
 
 .node {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   cursor: pointer;
   transition: 0.15s;
   min-width: 10vw;
@@ -634,25 +701,26 @@ body {
 }
 
 .line {
-  position: fixed;
+  position: absolute;
   transform-origin: 0 0;
-  height: 4px;
+  height: 6px;
   z-index: 0;
+  cursor: pointer;
   background: linear-gradient(90deg, #ddd 50%, transparent 50%);
-  background-size: 15px 100%;
+  background-size: 30px 100%;
   background-repeat: repeat-x;
   animation: move-dashed-line 1s infinite linear;
   transition: 0.15s;
   &:hover {
     background: linear-gradient(90deg, #ccc 50%, transparent 50%);
-    height: 6px;
-    background-size: 15px 100%;
+    height: 8px;
+    background-size: 30px 100%;
     background-repeat: repeat-x;
   }
 }
 
 .node-content {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;

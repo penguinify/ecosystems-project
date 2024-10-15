@@ -2,77 +2,92 @@
     {
         "id": 1,
         "name": "Plants",
-        "content":
-            {
-                "images": [],
-                "information": "aB1!cD2@eF3#gH4$iJ5%kL6^mN7&oP8*pQ9(rS0)sT1-uV2=wX3+yY4_zZ5"
-            },
-        "connections": [2, 3]
+        "content": {
+            "images": ["./static/trees.png", "./static/grass.png"],
+            "information": "In the Patagonian Steppe, there are a lot of grass and shrubs but no trees. A few species here include the Destuca Gracillima and Jarava Chrysophylla. While the Pre-Andean Scrubland is similar to the Patagonian Steppe, it is more grassy and contains shrubs and trees such as the Nothofagus Pumiolio. The Magellanic Forest is more humid and cooler than the other regions of the park. Some of the trees in this forest are the Nothofagus Pumilio and the Nothofagus Betuloids. The Andean Desert has litter to no vegetation. In fact, it has less than 10% vegetation cover. It is cold year round with permanent ice and less water than the other areas.",
+            "connection_content": [
+                "Plants -> Animals: <br> Animals like the lesser horned owl use trees for shelter. It is also the lowest in the food chain, getting eating by animals such as guanacos.",
+                ""
+            ]
+        },
+        "connections": [2]
     },
-
     {
         "id": 2,
         "name": "Animals",
-        "content":
-            {
-                "images": [],
-                "information": "qW1!eR2@tY3#uI4$oP5%aS6^dF7&gH8*jK9(lL0)zX1-xC2=vV3+bN4_mM5"
-            },
-        "connections": [6, 3]
+        "content": {
+            "images": [],
+            "information": "While the Torres del Paine ecosystem is large, there are a few important standout species. Guanacos are a grazer near the middle of the food chain. They eat shrubs, herbs, lichens, fungi, cacti, and flowers. Guanacos live in small packs of around 30. Pumas, Torres del Paine’s apex predator, eats guanacos, hares, and the hog-nosed skunk. Pumas play an important role preventing overgrazing which promotes biodiversity among the flowers and plants. There are also birds such as the lesser horned owl, which eats rodents as well as small birds and insects. The main endangered and protected animal is the South Andean deer. This animal eats leaves and grass, but since it is Chile’s national animal, it is important it doesn’t go extinct.",
+            "connection_content": [
+                "Animals -> Plants: <br> Guanacos eat shrubs, grass, and flowers and other animals use plants such as trees for shelter.",
+                "Animals -> Water Sources: <br> Animals require water in order to survive, luckily, Torres del Paine has many freshwater lakes in its 700 square mile park for the animals to drink from. In desperate times, animals could also eat snow or ice for water."
+            ]
+        },
+        "connections": [1, 6]
     },
-
     {
         "id": 3,
         "name": "Keystone Species",
-        "content":
-            {
-                "images": ["./static/puma_picture.webp"],
-                "information": "The puma as an apex predator plays a big role in the ecosystem. Being the main predator to guanaco, it helps prevent overgrazing to support the many plants and flowers. It is also the only large predator, so it also has a massive role, keeping smaller mammals and other animals lower in the food chain from over populating such as hares."
-            },
-        "connections": [2, 7]
+        "content": {
+            "images": ["./static/puma_picture.webp"],
+            "information": "The puma as an apex predator plays a big role in the ecosystem. Being the main predator to guanaco, it helps prevent overgrazing to support the many plants and flowers. It is also the only large predator, so it also has a massive role, keeping smaller mammals and other animals lower in the food chain from over populating such as hares.",
+            "connection_content": [
+                "Keystone Species -> Animals: <br> As an apex predator, the puma is the main predator to guanacos, hares, and the hog-nosed skunk. This helps prevent overgrazing and promotes biodiversity among the flowers and plants.",
+                "Keystone Species -> Plants: <br> The puma helps prevent overgrazing from the guanacos which can promote biodiversity among the flowers and plants."
+            ]
+        },
+        "connections": [2, 1]
     },
-
     {
         "id": 4,
         "name": "Location & Terrain",
-        "content":
-            {
-                "images": ["./static/topographicmap.png", "./static/googlemap.png"],
-                "information": "Torres del Paine national park is located in Patagonia, Chile, which is near the southern tip. The park in total is 700.43 square miles and is mainly mountainous with a few valleys. A few of the main valleys are French Valley, Bader Valley, Ascension Valley, and Valley of Silence. The highest peak in the park, Cerro Paine Grande, reaches 9461ft tall. There are also four different ecological zones, Andean Desert, Magellanic subpolar forest, pre-Andean shrublands, and Patagonian steppe."
-            },
+        "content": {
+            "images": ["./static/topographicmap.png", "./static/googlemap.png"],
+            "information": "Torres del Paine national park is located in Patagonia, Chile, which is near the southern tip. The park in total is 700.43 square miles and is mainly mountainous with a few valleys. A few of the main valleys are French Valley, Bader Valley, Ascension Valley, and Valley of Silence. The highest peak in the park, Cerro Paine Grande, reaches 9461ft tall. There are also four different ecological zones, Andean Desert, Magellanic subpolar forest, pre-Andean shrublands, and Patagonian steppe.",
+            "connection_content": [
+                "Location & Terrain -> Climate & Weather: <br> Due to Torres del Paine being mountainous, it is very cold year round with permanent ice aswell as being windy.",
+                "Location & Terrain -> Animals: <br> Spatial niche partitioning occurs in the park due to the 4 distinct ecological zones. This is mostly due to the elevation differences due to the location."
+            ]
+        },
         "connections": [5, 2]
     },
-
     {
         "id": 5,
         "name": "Climate & Weather",
-        "content":
-            {
-                "images": ["./static/temperaturechart.png"],
-                "information": "Due to Torres del Paine being in the southern hemisphere, it’s summer and winter months are flipped. So, while in the northern hemisphere it is warm in June, it is freezing in the southern hemisphere. From the graph below, you can see the average temperatures compared to the temperatures from Olympic national park in Washington. From that you can observe that Torres del Paine remains cold throughout the entire year. Torres del Paine is also known to be extremely windy like other mountainous national parks."
-            },
-        "connections": [7, 4]
+        "content": {
+            "images": ["./static/temperaturechart.png"],
+            "information": "Due to Torres del Paine being in the southern hemisphere, it’s summer and winter months are flipped. So, while in the northern hemisphere it is warm in June, it is freezing in the southern hemisphere. From the graph below, you can see the average temperatures compared to the temperatures from Olympic national park in Washington. From that you can observe that Torres del Paine remains cold throughout the entire year. Torres del Paine is also known to be extremely windy like other mountainous national parks.",
+            "connection_content": [
+                "Climate & Weather -> Water Sources: <br> Torres del Paine gets a lot of rain, at least 230mm per month. This water contributes to the water source supply which sustains the ecosystem.",
+                "Climate & Weather -> Animals: <br> Animals like the Dwarf Armadillo hibernate during the cold winter months, or summer months in the northenr hemisphere, in order to wat out the cold."
+            ]
+        },
+        "connections": [6, 2]
     },
-
     {
         "id": 6,
         "name": "Water Sources",
-        "content":
-            {
-                "images": [],
-                "information": "Torres del Paine national park does not connect to the ocean but it does encompass a few freshwater lakes such as Gray Lake, Lago Sarmiento de Gamboa, Lake Pehoé, Nordenskjold Lake, and Lago Geikie. There are a few rivers between and flowing into the lakes. These lakes are a stable source of water for the animals living there and good amount of snow especially during their winter months."
-            },
-        "connections": [3, 4]
+        "content": {
+            "images": [],
+            "information": "Torres del Paine national park does not connect to the ocean but it does encompass a few freshwater lakes such as Gray Lake, Lago Sarmiento de Gamboa, Lake Pehoé, Nordenskjold Lake, and Lago Geikie. There are a few rivers between and flowing into the lakes. These lakes are a stable source of water for the animals living there and good amount of snow especially during their winter months.",
+            "connection_content": [
+                "Water Sources -> Plants: <br> Water is vital for plants to survive. This is evident because in the Andean Desert, there is less than 10% vegetation cover due to the lack of water.",
+                "Water Sources -> Climate & Weather: <br> Due to the high amount of water in the park, when it is hot it is very humid in the park."
+            ]
+        },
+        "connections": [1, 5]
     },
-
     {
         "id": 7,
         "name": "Human Interactions",
-        "content":
-            {
-                "images": ["./static/wildfire.png"],
-                "information": "Humans have a major role in the Torres del Paine national park. For example, in 2012, A tourist accidently caused a massive wildfire in Torres del Paine burning down about 15000 hectares. With nearly 300,000 tourists each year in this 700 square mile park there is bound to be plastic and other trash scattered around in the park, negatively affecting wildlife. On the other hand, CONAF, the Chilean national park authority, help repair damaged ecosystems. They also use tools such as photo monitoring to improve conservation efforts. "
-            },
-        "connections": [5, 1]
+        "content": {
+            "images": ["./static/wildfire.png"],
+            "information": "Humans have a major role in the Torres del Paine national park. For example, in 2012, A tourist accidently caused a massive wildfire in Torres del Paine burning down about 15000 hectares. With nearly 300,000 tourists each year in this 700 square mile park there is bound to be plastic and other trash scattered around in the park, negatively affecting wildlife. On the other hand, CONAF, the Chilean national park authority, help repair damaged ecosystems. They also use tools such as photo monitoring to improve conservation efforts.",
+            "connection_content": [
+                "Human Interaction -> Animals: <br> CONAF uses photo monitoring to improve conservation efforts which can help conserve endengered species. For example, CONAF helps with the conservation of the South Andean deer in order to prevent its extinction.",
+                "Human Interaction -> Climate & Weather: <br> The massive wildfire in 2012 which was caused by a tourist burnt down about 15000 hectares of the park. The fire caused a decent amount of air pollution as well as heating up the park and the surrounding landscape burning up shelter."
+            ]
+        },
+        "connections": [2, 5]
     }
 ]

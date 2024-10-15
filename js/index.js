@@ -7,7 +7,29 @@ function main() {
     const nodeManager = new NodeManager(app, nodes_json);
     nodeManager.renderNodes();
 
+    scrollEffect();
 
+
+}
+
+function scrollEffect() {
+    let intro = document.getElementById('intro');
+
+    window.addEventListener('scroll', function() {
+        let value = window.scrollY;
+
+        intro.animate([
+            { 
+                top: value * 0.3 + 'px',
+                opacity: 1 - value / 700
+            }
+        ], {
+            duration: 50,
+            easing: 'ease',
+            fill: 'forwards'
+        });
+
+    });
 }
 
 main();
